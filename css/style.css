@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+:root{
+    --main-color: #F0D85C;
+    --main-color-darker: #e2cf71;
+    --product-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.15);
+    --bg-success: #4FC553;
+    --bg-danger: #BD2B2B;
+    --sale-color: #F05C5C;
+    --dark-purple: #404151;
+    --lighter-purple: #525366;
+    --toast-color: #7188A4;
+    --toast-timer-color: #59728E;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    overflow-x: hidden;
+    font-family: "Nunito", sans-serif;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.flex-center-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mb-2{
+    margin-bottom: 20px;
+}
+
+.mb-3{
+    margin-bottom: 30px;
+}
+
+.mb-4{
+    margin-bottom: 40px;
+}
+
+.mb-5{
+    margin-bottom: 50px;
+}
+
+.mt-2{
+    margin-top: 20px;
+}
+
+.mt-3{
+    margin-top: 30px;
+}
+
+.mt-4{
+    margin-top: 40px;
+}
+
+.mt-5{
+    margin-top: 50px;
+}
+
+.bg-success{
+    background: var(--bg-success);
+}
+
+.bg-danger{
+    background: var(--bg-danger);
+}
+
+.hidden{
+    display: none;
+}
+
+.list-with-style{
+    list-style: inside;
+}
+
+.list-with-style li:hover{
+    text-decoration: underline;
+}
+
+/* Form Styles */
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea{
+    display: inline-block;
+    height: 45px;
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder{
+    color: #ddd;
+    font-size: .9rem;
+}
+
+.input-group textarea{
+    resize: none;
+    height: 150px;
+}
+
+/* End of Form Styles */
+
+/* Product Grid Styles */
+
+.product button{
+    background: var(--main-color);
+    display: block;
+    width: 70%;
+    height: 40px;
+    color: white;
+    font-weight: 200 !important;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 150ms ease;
+    position: relative;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+}
+
+.product button:hover{
+    background: var(--main-color-lighter);
+}
+
+.product button span{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: lighter;
+    transition: left 400ms ease;
+}
+
+.product button:hover span{
+    left: 0;
+}
+
+.product .prev-price{
+    font-size: 1.05rem;
+    color: #ccc;
+    text-decoration: line-through;
+    margin-right: 5px;
+    font-weight: 300;
+}
+
+.product .sale{
+    background: var(--sale-color);
+    color: white;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 1.3rem;
+    transform: rotateZ(22deg);
+}
+
+/* End of Product Grid Styles */

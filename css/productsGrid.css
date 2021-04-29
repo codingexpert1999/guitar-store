@@ -1,0 +1,115 @@
+.grid-title{
+    font-weight: 400;
+    color: #333;
+    font-size: 1.7rem;
+}
+
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 300px));
+    grid-template-rows: minmax(450px, 480px);
+    grid-gap: 50px;
+}
+
+.product{
+    background: white;
+    box-shadow: var(--product-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.product img{
+    max-width: 50%;
+    max-height: 250px;
+    margin-bottom: 20px;
+}
+
+.product h4{
+    font-weight: 400;
+    color: #333;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.product h4:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.product strong{
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+.categories-grid{
+    grid-template-rows: 350px;
+}
+
+.categories-grid .product{
+    transition: transform 250ms ease;
+}
+
+.categories-grid .product:hover{
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.categories-grid .product h4:hover{
+    text-decoration: none;
+}
+
+/* Media queries */
+
+@media(max-width: 1540px){
+    .products-grid{
+        grid-template-columns: repeat(3, minmax(200px, 300px));
+    }
+}
+
+@media(max-width: 1130px){
+    .products-grid{
+        justify-content: center;
+        grid-template-columns: repeat(2, minmax(200px, 300px));
+        grid-template-rows: minmax(380px);
+    }
+
+    .product img{
+        max-width: 50%;
+        max-height: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .product h4{
+        font-size: 1.2rem;
+    }
+    
+    .product strong{
+        font-size: 1.1rem;
+    }
+    
+    .product button{
+        font-size: 1rem;
+    }
+    
+    .product .sale{
+        top: -25px;
+        right: -25px;
+        width: 65px;
+        height: 65px;
+        font-size: 1.1rem;
+    }
+    
+    .product .prev-price{
+        font-size: .95rem;
+    }
+}
+
+@media(max-width: 545px){
+    .products-grid{
+        justify-content: center;
+        grid-template-columns: 250px;
+    }
+}
+
+/* End of media queries */

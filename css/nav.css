@@ -1,0 +1,134 @@
+nav{
+    background: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.nav li{
+    margin-right: 25px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav li:last-child{
+    margin-right: 0;
+}
+
+.nav li::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 250ms ease-in;
+}
+
+.nav li:hover::after{
+    width: 100%;
+}
+
+.nav li span{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    color: white;
+    background: var(--dark-purple);
+    top: -7px;
+    right: -13px;
+    font-size: .8rem;
+}
+
+.nav-brand{
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+.sidenav{
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: -200px;
+    height: calc(100vh - 60px);
+    width: 200px;
+    z-index: 9999;
+    background: var(--main-color-darker);
+    color: white;
+    padding-top: 30px;
+    transition: right 500ms ease;
+}
+
+.sidenav li{
+    margin-right: 0;
+    margin-bottom: 60px;
+}
+
+.hamburger{
+    display: none;
+    height: 45px;
+    width: 45px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.hamburger::after{
+    content: "\2715";
+    color: white;
+    display: none;
+    font-size: 1.3rem;
+}
+
+.hamburger.close::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger span{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 5px;
+    background: white;
+}
+
+.hamburger span:last-child{
+    margin-bottom: 0;
+}
+
+.hamburger.close span{
+    display: none;
+}
+
+/* Media Queries */
+
+@media(max-width: 780px){
+    .nav{
+        display: none;
+    }
+
+    .sidenav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+}
+
+/* End of media Queries */

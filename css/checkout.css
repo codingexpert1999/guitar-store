@@ -1,0 +1,152 @@
+.checkout{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 600px;
+    margin-right: 50px;
+}
+
+.radio-group{
+    margin-bottom: 20px;
+}
+
+.radio-group label{
+    display: block;
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.radio-button{
+    display: flex;
+    align-items: center;
+}
+
+.radio-button span{
+    font-size: 1.2rem;
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+.radio-button input{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+button{
+    font-family: "Nunito", sans-serif;
+    background: var(--dark-purple);
+    color: white;
+    padding: 5px 35px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    border-radius: 3px;
+    transition: background-color 250ms ease;
+}
+
+button:hover{
+    background: var(--lighter-purple);
+}
+
+.payment-details{
+    background: #f9f9f9;
+    color: #333;
+    height: fit-content;
+    min-width: 200px;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.payment-details h3{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.payment-details h3:first-child{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.payment-details h3:last-child{
+    margin-top: 15px;
+    border-top: 1px solid #333;
+    padding-top: 5px;
+}
+
+.payment-details > span{
+    display: block;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.payment-details > span:nth-child(2){
+    margin-bottom: 5px;
+}
+
+.payment-details > span span{
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+/* Media Queries */
+
+@media(max-width: 1150px){
+    form{
+        width: 500px;
+    }
+}
+
+@media(max-width: 850px){
+    .input-group input{
+        height: 40px;
+    }
+
+    .input-group label, .radio-group label{
+        font-size: 1.2rem;
+    }
+
+    .radio-button span{
+        font-size: 1rem;
+    }
+    
+    .radio-button input{
+        height: 17px;
+        width: 17px;
+    }
+
+    button{
+        font-size: .9rem;
+    }
+
+    .payment-details{
+        min-width: 200px;
+    }
+    
+    .payment-details h3{
+        font-size: 1.1rem;
+    }
+    
+    .payment-details > span{
+        font-size: .95rem;
+    }
+}
+
+@media(max-width: 675px){
+    .checkout{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    form{
+        width: 100%;
+        margin-right: 0;
+        margin-top: 50px;
+    }
+}
+
+/* End of Media Queries */

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>GuitarStore | Checkout</title>
+</head>
+<body>
+    <nav>
+        <span class="nav-brand">GuitarStore</span>
+
+        <ul class="nav flex-center-row">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="/products.html">Products</a>
+            </li>
+            <li>
+                <a href="/cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+                <span class="flex-center-row"></span>
+            </li>
+        </ul>
+
+        <div class="flex-center-column hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <ul class="nav sidenav">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="/products.html">Products</a>
+        </li>
+        <li>
+            <a href="/cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+            <span class="flex-center-row"></span>
+        </li>
+    </ul>
+
+    <div class="container mb-5 checkout">
+        <form>
+            <div class="input-group">
+                <label>First Name</label>
+                <input id="first-name" type="text" placeholder="Enter your first name...">
+            </div>
+
+            <div class="input-group">
+                <label>Last Name</label>
+                <input id="last-name" type="text" placeholder="Enter your last name...">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input id="email" type="email" placeholder="Enter your email...">
+            </div>
+
+            <div class="input-group">
+                <label>Country</label>
+                <input id="country" type="text" placeholder="Enter your country...">
+            </div>
+
+            <div class="input-group">
+                <label>Address</label>
+                <input id="address" type="text" placeholder="Enter your address...">
+            </div>
+
+            <div class="input-group">
+                <label>Zip Code</label>
+                <input id="zip-code" type="text" placeholder="Enter your zip code...">
+            </div>
+
+            <div class="radio-group">
+                <label>Receive From</label>
+
+                <div class="radio-button">
+                    <span>Home Delivery</span>
+                    <input type="radio" id="home-delivery" checked>
+                </div>
+
+                <div class="radio-button">
+                    <span>Receive From Store</span>
+                    <input type="radio" id="receive-from-store">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Order Details <span>(Optional)</span></label>
+                <textarea id="order-details" placeholder="Add your order details here (e.g. your apartment number, e.g. your workplace)..."></textarea>
+            </div>
+
+            <button type="submit">Complete Order</button>
+        </form>
+
+        <div class="payment-details">
+            <h3>Payment Details</h3>
+
+            <span id="cart-total">Cart Total: <span>1800$</span></span>
+
+            <span id="shipping">Shipping: <span>50$</span></span>
+
+            <h3 id="total-price">Total Price: <strong>1850$</strong></h3>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-grid-box">
+                <h4>Categories</h4>
+
+                <ul class="list-with-style"></ul>
+            </div>
+
+            <div class="footer-grid-box">
+                <h4>Contact Us</h4>
+
+                <ul id="contact-list"></ul>
+            </div>
+
+            <div class="footer-grid-box">
+                <h4>Our Store</h4>
+
+                <ul id="info-list"></ul>
+            </div>
+        </div>
+        
+        <p>GuitarStore &copy; 2021-2022</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

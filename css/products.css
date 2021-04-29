@@ -1,0 +1,146 @@
+.products{
+    display: flex;
+}
+
+.filters{
+    width: 250px;
+    margin-right: 50px;
+}
+
+.products .products-grid{
+    width: calc(100% - 250px);
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+    grid-template-rows: minmax(450px, 480px);
+}
+
+.products .products-grid p{
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.filter:last-child{
+    margin-bottom: 0;
+}
+
+.filter h4{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.checkbox-box{
+    padding-left: 10px;
+    width: 185px;
+}
+
+.checkbox-group{
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-group:last-child{
+    margin-bottom: 0;
+}
+
+.checkbox-group label{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.checkbox-group input{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+}
+
+/* Media queries */
+
+@media(max-width: 1440px){
+    .products .products-grid{
+        justify-content: center;
+        grid-template-columns: repeat(2, minmax(200px, 300px));
+    }
+}
+
+@media(max-width: 1015px){
+    .products .products-grid{
+        width: calc(100% - 200px);
+    }
+
+    .filters{
+        width: 200px;
+    }
+
+    .filter h4{
+        font-size: 1.1rem;
+    }
+    
+    .checkbox-box{
+        width: 170px;
+    }
+    
+    .checkbox-group label{
+        font-size: 1.1rem;
+    }
+    
+    .checkbox-group input{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media(max-width: 865px){
+    .products .products-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 450px;
+    }
+}
+
+@media(max-width: 545px){
+    .products{
+        width: 85%;
+    }
+
+    .products .products-grid{
+        width: calc(100% - 160px);
+    }
+
+    .filters{
+        width: 160px;
+    }
+
+    .filter h4{
+        font-size: 1rem;
+    }
+    
+    .checkbox-box{
+        width: 100%
+    }
+    
+    .checkbox-group label{
+        font-size: .9rem;
+        font-weight: 300;
+    }
+    
+    .checkbox-group input{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media(max-width: 440px){
+    .products .products-grid button{
+        height: 45px;
+        width: 80%;
+    }
+}
+
+/* End of media queries */

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>GuitarStore | Cart</title>
+</head>
+<body>
+    <nav>
+        <span class="nav-brand">GuitarStore</span>
+
+        <ul class="nav flex-center-row">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="/products.html">Products</a>
+            </li>
+            <li>
+                <a href="/cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+                <span class="flex-center-row"></span>
+            </li>
+        </ul>
+
+        <div class="flex-center-column hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <ul class="nav sidenav">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="/products.html">Products</a>
+        </li>
+        <li>
+            <a href="/cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+            <span class="flex-center-row"></span>
+        </li>
+    </ul>
+
+    <div class="container mb-5 cart">
+        <h1>Shopping Cart</h1>
+
+        <div class="cart-items"></div>
+
+        <div class="cart-bottom">
+            <a class="flex-center-row" href="/products.html">Continue Shopping</a>
+            <div class="total-price">
+                Total Price: <strong>1870$</strong>
+            </div>
+        </div>
+
+        <a href="checkout.html" class="checkout-btn">CHECKOUT</a>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-grid-box">
+                <h4>Categories</h4>
+
+                <ul class="list-with-style"></ul>
+            </div>
+
+            <div class="footer-grid-box">
+                <h4>Contact Us</h4>
+
+                <ul id="contact-list"></ul>
+            </div>
+
+            <div class="footer-grid-box">
+                <h4>Our Store</h4>
+
+                <ul id="info-list"></ul>
+            </div>
+        </div>
+        
+        <p>GuitarStore &copy; 2021-2022</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

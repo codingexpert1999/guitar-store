@@ -1,0 +1,163 @@
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.product-image{
+    margin-right: 80px;
+    position: relative;
+}
+
+.product-image img{
+    width: 180px;
+    height: auto;
+}
+
+.product-image .sale{
+    top: calc(100% - 50px);
+    right: 0;
+}
+
+.product-details{
+    width: 500px;
+}
+
+.product-details h1{
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-details h5{
+    color: #ccc;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.product-details p{
+    color: #333;
+    letter-spacing: 0.4px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.product-details strong{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.product-details button{
+    width: 150px;
+}
+
+.no-result{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Media Queries */
+
+@media(max-width: 770px){
+    .product{
+        height: calc(100vh - 105px);
+    }
+}
+
+@media(max-width: 700px){
+    .product-image{
+        margin-right: 35px;
+    }
+
+    .product-image img{
+        width: 130px;
+    }
+    
+    .product-details{
+        width: 350px;
+    }
+    
+    .product-details h1{
+        font-size: 1.6rem;
+    }
+    
+    .product-details p{
+        font-size: 1.1rem;
+    }
+    
+    .product-details strong{
+        font-size: 1.2rem;
+    }
+    
+    .product-details button{
+        width: 120px;
+        font-size: 1rem;
+    }
+    
+    .no-result{
+        font-size: 1.3rem;
+    }
+
+    .product-image .sale{
+        width: 65px;
+        height: 65px;
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 525px){
+    .product-image{
+        margin-right: 25px;
+    }
+    
+    .product-image img{
+        width: 110px;
+    }
+    
+    .product-details{
+        width: 250px;
+    }
+    
+    .product-details h1{
+        font-size: 1.4rem;
+    }
+    
+    .product-details p{
+        font-size: .95rem;
+    }
+    
+    .product-details strong{
+        font-size: 1rem;
+    }
+    
+    .product-details button{
+        width: 100px;
+        font-size: .9rem;
+    }
+    
+    .no-result{
+        font-size: 1.1rem;
+    }
+
+    .product-image .sale{
+        width: 55px;
+        height: 55px;
+        font-size: .85rem;
+    }
+}
+
+@media(max-width: 450px){
+    .product{
+        flex-direction: column;
+    }
+
+    .product-image{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* End of Media Queries */
