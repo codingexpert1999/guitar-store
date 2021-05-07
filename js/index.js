@@ -60,7 +60,7 @@ const initializeSales = () => {
                     <a href="/product.html?productId=${product.id}">${product.name}</a>
                 </h4>
 
-                <strong><span class="prev-price">${product.price}$</span> ${product.price}$</strong>
+                <strong><span class="prev-price">${product.price}$</span> ${product.newPrice}$</strong>
 
                 <button>
                     Add To Cart
