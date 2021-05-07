@@ -9,16 +9,24 @@ const setTotalPrice = () => {
 const setQuantityListeners = (callback) => {
     document.querySelectorAll(".increment").forEach(span => {
         span.addEventListener("click", () => {
-            let cartItemId = span.parentNode.parentNode.id;
+            let cartItemElementId = span.parentNode.parentNode.id;
 
-            let input = document.querySelector(`#${cartItemId} input`);
+            let input = document.querySelector(`#${cartItemElementId} input`);
 
             let currentQuantity = parseInt(input.value);
 
             input.value = currentQuantity + 1;
 
+            const cartItemId = parseInt(cartItemElementId.split("-")[2]);
+
+            let currentCartItem = cart.find(cartItem => cartItem.id === cartItemId);
+            let price = currentCartItem.newPrice > 0 ? currentCartItem.newPrice : currentCartItem.price;
+
+            let itemTotal = document.querySelector(`#${cartItemElementId} .total strong`)
+            itemTotal.innerHTML = (price * (currentQuantity + 1)) + "$"
+
             cart = cart.map(cartItem => {
-                if(cartItem.id === parseInt(cartItemId.split("-")[2])){
+                if(cartItem.id === cartItemId){
                     cartItem.quantity = currentQuantity + 1;
                 }
 
@@ -35,24 +43,32 @@ const setQuantityListeners = (callback) => {
 
     document.querySelectorAll(".decrement").forEach(span => {
         span.addEventListener("click", () => {
-            let cartItemId = span.parentNode.parentNode.id;
+            let cartItemElementId = span.parentNode.parentNode.id;
 
-            let input = document.querySelector(`#${cartItemId} input`);
+            let input = document.querySelector(`#${cartItemElementId} input`);
 
             let currentQuantity = parseInt(input.value);
 
             input.value = currentQuantity - 1;
 
-            let currentCartLength = cart.length
+            const cartItemId = parseInt(cartItemElementId.split("-")[2]);
+
+            let currentCartItem = cart.find(cartItem => cartItem.id === cartItemId);
+            let price = currentCartItem.newPrice > 0 ? currentCartItem.newPrice : currentCartItem.price;
+
+            let itemTotal = document.querySelector(`#${cartItemElementId} .total strong`)
+            itemTotal.innerHTML = (price * (currentQuantity - 1)) + "$"
+
+            const currentCartLength = cart.length
 
             cart = cart.map(cartItem => {
-                if(cartItem.id === parseInt(cartItemId.split("-")[2])){
+                if(cartItem.id === cartItemId){
                     cartItem.quantity = currentQuantity - 1;
                 }
 
                 return cartItem;
             }).filter(cartItem => cartItem.quantity > 0);
-
+            
             localStorage.setItem("cart", JSON.stringify(cart));
 
             if(cart.length < currentCartLength){
